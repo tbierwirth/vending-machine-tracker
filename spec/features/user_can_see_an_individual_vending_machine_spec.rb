@@ -20,20 +20,14 @@ RSpec.describe 'When a user visits a vending machine show page', type: :feature 
 
     visit machine_path(dons)
 
-    within "snack-#{burger.id}" do
-      expect(page).to have_content(burger.name)
-      expect(page).to have_content(number_to_currency(burger.price))
-    end
+    expect(page).to have_content(burger.name)
+    expect(page).to have_content(number_to_currency(burger.price))
 
-    within "snack-#{pop_rocks.id}" do
-      expect(page).to have_content(pop_rocks.name)
-      expect(page).to have_content(number_to_currency(pop_rocks.price))
-    end
+    expect(page).to have_content(pop_rocks.name)
+    expect(page).to have_content(number_to_currency(pop_rocks.price))
 
-    within "snack-#{cheetos.id}" do
-      expect(page).to have_content(cheetos.name)
-      expect(page).to have_content(number_to_currency(cheetos.price))
-    end
+    expect(page).to have_content(cheetos.name)
+    expect(page).to have_content(number_to_currency(cheetos.price))
 
   end
 end
