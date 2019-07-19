@@ -29,7 +29,7 @@ RSpec.describe 'When a user visits a vending machine show page', type: :feature 
     expect(page).to have_content(cheetos.name)
     expect(page).to have_content(number_to_currency(cheetos.price))
 
-    expect(page).to have_content(number_to_currency((cheetos.price) + (burger.price) + (pop_rocks.price)) / 3)
+    expect(page).to have_content(number_to_currency(((cheetos.price) + (burger.price) + (pop_rocks.price))/3))
 
   end
 end
